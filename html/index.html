@@ -29,17 +29,31 @@
             <br>
         </form>
     </div>
+
     <script>
-        function Nhap();
-        var tendn, mk;
-        tendn = document.getElementById("txtuser").value;
-        mk = document.getElementById("txtpass").value;
-        // Checkbox: luu gia tri vao mang Array()
-        var cafe = new Array();
-        var taphop = document.querySelectorAll("input[type='checkbox']");
-        taphop.forEach(function(chk)) {
-            if (chk.value);
-        }
+        function Nhap() {
+            var tendn, mk;
+            tendn = document.getElementById("txtus").value;
+            mk = document.getElementById("txtmk").value;
+            // checkbox: lưu giá trị vào mảng Array()
+            var cafe = new Array();
+            var taphop = document.querySelectorAll("input[type='checkbox']"); // taphop.forEach(function(chk) { if (chk.checked)
+        };
+        cafe.push(chk.value); //
+        // radio: lưu 1 giá trị
+        var gtinh;
+        var taphopgt = document.querySelectorAll("input[type='radio']"); // 
+        taphopgt.forEach(function(ra) {
+            if (ra.checked)
+                gtinh = ra.value; //
+        });
+
+        // alert(tendn);
+        // xử lý tendn, mk: bỏ qua var w= window.open("info.html"); // lưu dữ liệu set: ghi vào
+        localStorage.setItem("us", tendn);
+        localStorage.setItem("pd", mk);
+        localStorage.setItem("cf", cafe);
+        localStorage.setItem("gt", gtinh);
     </script>
 </body>
 
